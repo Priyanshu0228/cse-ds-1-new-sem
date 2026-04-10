@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <link rel="stylesheet" href="heloo.css">
+<meta charset="UTF-8">
+<title> Glitch Effect</title>
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+  body {
+    background: black;
+    color: white;
+    font-family: monospace;
+    overflow: hidden;
+  }
+
+  .glitch {
+    display: inline-block;
+    transition: transform 0.2s ease;
+  }
+</style>
+</head>
+
+<body class="flex flex-col items-center justify-center h-screen">
+
+<h1 id="name" class="text-5xl font-bold glitch mb-6">
+  PRIYANSHU KUMAR
+</h1>
+
+<p id="desc" class="text-center w-2/3 text-sm mb-10">
+  CSE SPECIALIZATION IN DS STUDENT
+</p>
+
+<input type="range" min="90" max="100" value="94" id="freqSlider" class="w-1/2">
+
+<p class="mt-4">Frequency: <span id="freqValue">94</span> MHz</p>
+
+<script>
+const targetFreq = 94;
+const nameEl = document.getElementById("name");
+const descEl = document.getElementById("desc");
+const slider = document.getElementById("freqSlider");
+const freqValue = document.getElementById("freqValue");
+
+const originalName = "PRIYANSHU KUMAR";
+const originalDesc = "CSE SPECIALIZATION IN DS STUDENT";
+
+
+function glitchText(text) {
+  const chars = "!@#$%^&*()_+-=[]{}<>?/|";
+  return text.split("").map(c => {
+    return Math.random() > 0.7 ? chars[Math.floor(Math.random()*chars.length)] : c;
+  }).join("");
+}
+
+slider.addEventListener("input", () => {
+  const freq = parseInt(slider.value);
+  freqValue.textContent = freq;
+
+  const diff = Math.abs(freq - targetFreq);
+
+  if (diff === 0) {
+    // Perfect signal
+    nameEl.textContent = originalName;
+    descEl.textContent = originalDesc;
+    nameEl.style.transform = "translate(0,0)";
+  } else {
+    // Glitch intensity based on distance
+    nameEl.textContent = glitchText(originalName);
+    descEl.textContent = glitchText(originalDesc);
+
+    // Position shift effect
+    const shift = diff * 3;
+    nameEl.style.transform = `translate(${Math.random()*shift - shift/2}px, ${Math.random()*shift - shift/2}px)`;
+  }
+});
+</script>
+section class="section-container">
+  <h2 class="section-title">[ EDUCATION_HISTORY ]</h2>
+  <div class="edu-item">
+    <div class="edu-header">
+      <span class="degree">B.Tech - Computer Science (DS)</span>
+      <span class="date">2025 — 2029</span>
+    </div>
+    <div class="institution">ABES EC</div>
+    <p class="status"> SIGNAL STATUS: CURRENTLY ENROLLED (CGPA: X.X/10)</p>
+  </div>
+</section>
+
+<section class="section-container">
+  <h2 class="section-title">[ CORE_QUALIFICATIONS ]</h2>
+  <div class="skills-grid">
+    <div class="skill-box">
+      <h3>Academic Strengths</h3>
+      <ul>
+        <li>Data Structures & Algorithms</li>
+        <li>Neural Networks & Deep Learning</li>
+        <li>Database Management (SQL)</li>
+      </ul>
+    </div>
+    <div class="skill-box">
+      <h3>Soft Skills</h3>
+      <ul>
+        <li>Collaborative Problem Solving</li>
+        <li>Technical Documentation</li>
+        <li>Agile Methodology</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
