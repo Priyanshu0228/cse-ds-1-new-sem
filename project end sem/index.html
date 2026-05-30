@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Veloce - Discover premium tech gear, customized accessories, and lifestyle essentials with glassmorphic visuals, fluid layouts, and complete dark mode optimization.">
+    <title>Veloce | Premium Technology & Lifestyle Gear</title>
+    
+    <!-- External Styles -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon placeholder (Uses premium inline SVG) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='hsl(262, 85%25, 60%25)' stroke-width='3'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z' /%3E%3C/svg%3E">
+</head>
+<body>
+
+    <!-- Stars half-fill gradient SVG definition (Hidden) -->
+    <svg style="display: none;">
+        <defs>
+            <linearGradient id="halfStarGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="50%" stop-color="hsl(45, 100%, 50%)" />
+                <stop offset="50%" stop-color="hsl(0, 0%, 80%)" />
+            </linearGradient>
+        </defs>
+    </svg>
+
+    <!-- ==========================================================================
+       HEADER & NAVIGATION
+       ========================================================================== -->
+    <header class="header" id="header">
+        <div class="container">
+            <!-- Brand Logo -->
+            <a href="#" class="logo" id="brand-logo" aria-label="Veloce Home">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" style="width: 24px; height: 24px; stroke: url(#logoGrad);">
+                    <defs>
+                        <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="hsl(262, 85%, 60%)" />
+                            <stop offset="100%" stop-color="hsl(24, 95%, 55%)" />
+                        </linearGradient>
+                    </defs>
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+                </svg>
+                Veloce<span>.</span>
+            </a>
+
+            <!-- Main Navigation Links -->
+            <nav class="nav-bar" id="nav-bar" aria-label="Main Navigation">
+                <ul class="nav-links">
+                    <li><a href="#" class="nav-link active" id="nav-link-home">Home</a></li>
+                    <li><a href="#shop-section" class="nav-link" id="nav-link-shop">Shop</a></li>
+                    <li><a href="#footer" class="nav-link" id="nav-link-contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Navigation Buttons & Actions -->
+            <div class="nav-actions">
+                <!-- Theme Toggle Switch -->
+                <button class="icon-btn" id="theme-toggle" aria-label="Toggle Dark Mode" title="Toggle Dark/Light Mode">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                </button>
+
+                <!-- Cart Button with dynamic badge counter -->
+                <button class="icon-btn" id="cart-btn" aria-label="Open Shopping Cart" title="View Cart">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007z" />
+                    </svg>
+                    <span class="badge" id="cart-badge" style="display: none;">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       HERO BANNER
+       ========================================================================== -->
+    <section class="hero" id="hero-section">
+        <!-- Floating abstract shapes -->
+        <div class="hero-bg-shapes">
+            <div class="hero-shape hero-shape-1"></div>
+            <div class="hero-shape hero-shape-2"></div>
+        </div>
+
+        <div class="container hero-grid">
+            <!-- Left Info Block -->
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span>New Arrival</span> &bull; Summer Edition 2026
+                </div>
+                <h1 class="hero-title">
+                    Premium Tech & Style, Engineered for <span>You</span>
+                </h1>
+                <p class="hero-description">
+                    Experience the future of lifestyle design. Explore our curated selection of high-fidelity audio equipment, intelligent wearables, custom mechanics, and luxury daily essentials.
+                </p>
+                <a href="#shop-section" class="btn btn-primary" id="btn-hero-cta">
+                    Explore Collection
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Right Interactive Graphic -->
+            <div class="hero-image-wrapper">
+                <div class="hero-image-bg"></div>
+                <div class="hero-image-card" id="hero-interactive-card">
+                    <img src="assets/smartwatch.png" alt="Featured Veloce Smartwatch Mockup">
+                </div>
+                
+                <!-- Floating tags -->
+                <div class="hero-floating-card card-1" id="floating-tag-1">
+                    <div class="floating-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+                        </svg>
+                    </div>
+                    <div class="floating-text">
+                        <h4>High Performance</h4>
+                        <p>14-Day Battery Life</p>
+                    </div>
+                </div>
+
+                <div class="hero-floating-card card-2" id="floating-tag-2">
+                    <div class="floating-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <div class="floating-text">
+                        <h4>Premium Materials</h4>
+                        <p>Full-Grain Waterproof Leather</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       SHOP CATALOG SECTION
+       ========================================================================== -->
+    <main class="shop-section" id="shop-section">
+        <div class="container">
+            <div class="shop-title-wrapper">
+                <span class="section-label">Curated Gear</span>
+                <h2 class="section-title">Discover Our Premium Catalog</h2>
+            </div>
+
+            <!-- Sticky Filters & Sort Utility Bar -->
+            <div class="filter-bar" id="filter-bar">
+                <!-- Categories navigation -->
+                <div class="filter-categories" id="filter-categories" role="group" aria-label="Filter Categories">
+                    <button class="filter-chip active" data-category="All" id="chip-all">All</button>
+                    <button class="filter-chip" data-category="Electronics" id="chip-electronics">Electronics</button>
+                    <button class="filter-chip" data-category="Accessories" id="chip-accessories">Accessories</button>
+                    <button class="filter-chip" data-category="Footwear" id="chip-footwear">Footwear</button>
+                    <button class="filter-chip" data-category="Home & Living" id="chip-living">Home & Living</button>
+                </div>
+
+                <!-- Searching, Price Range, & Sorting actions -->
+                <div class="filter-actions" id="filter-actions">
+                    <!-- Text Search -->
+                    <div class="search-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <circle cx="11" cy="11" r="8" />
+                            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                        </svg>
+                        <input type="text" id="search-input" class="search-input" placeholder="Search product..." aria-label="Search catalog">
+                    </div>
+
+                    <!-- Price Slider -->
+                    <div class="price-slider-container">
+                        <span id="price-slider-label">Max Price:</span>
+                        <input type="range" id="price-slider" class="price-slider" min="30" max="350" value="350" aria-labelledby="price-slider-label">
+                        <span class="price-val" id="price-val">$350</span>
+                    </div>
+
+                    <!-- Dropdown Sort -->
+                    <select id="sort-select" class="sort-select" aria-label="Sort products by">
+                        <option value="popularity">Popularity</option>
+                        <option value="price-asc">Price: Low to High</option>
+                        <option value="price-desc">Price: High to Low</option>
+                        <option value="rating">Top Rated</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Products Grid Container -->
+            <div class="products-grid" id="products-grid">
+                <!-- Products will be dynamically populated here via JavaScript app.js -->
+            </div>
+        </div>
+    </main>
+
+    <!-- ==========================================================================
+       SIDE CART DRAWER
+       ========================================================================== -->
+    <div class="drawer-backdrop" id="drawer-backdrop">
+        <aside class="cart-drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-heading">
+            <!-- Header -->
+            <div class="drawer-header">
+                <h3 class="drawer-title" id="drawer-heading">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007z" />
+                    </svg>
+                    Shopping Cart
+                </h3>
+                <button class="drawer-close" id="drawer-close" aria-label="Close cart">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Dynamic Cart Items Container -->
+            <div class="drawer-content" id="drawer-content">
+                <!-- Populated dynamically via JS -->
+            </div>
+
+            <!-- Checkout Details / Coupon & Totals Block -->
+            <div class="drawer-footer" id="drawer-footer" style="display: none;">
+                <!-- Promo Code -->
+                <div class="promo-container">
+                    <input type="text" id="promo-input" class="promo-input" placeholder="Promo code (e.g. VELOCE20)" aria-label="Promo code input">
+                    <button class="btn-promo" id="btn-promo">Apply</button>
+                </div>
+
+                <!-- Computations -->
+                <div class="summary-rows">
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span id="subtotal-val">$0.00</span>
+                    </div>
+                    <div class="summary-row discount-row" id="discount-row" style="display: none;">
+                        <span id="discount-label">Discount</span>
+                        <span id="discount-val">-$0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Estimated Shipping</span>
+                        <span id="shipping-val">$0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Estimated Tax (8%)</span>
+                        <span id="tax-val">$0.00</span>
+                    </div>
+                    <div class="summary-row total-row">
+                        <span>Total Due</span>
+                        <span id="total-val">$0.00</span>
+                    </div>
+                </div>
+
+                <!-- Checkout triggers -->
+                <button class="btn-checkout" id="btn-checkout">
+                    Secure Checkout
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                    </svg>
+                </button>
+            </div>
+        </aside>
+    </div>
+
+    <!-- ==========================================================================
+       PRODUCT DETAIL DYNAMIC VIEW MODAL
+       ========================================================================== -->
+    <div class="modal-backdrop" id="modal-backdrop">
+        <div class="modal-card" id="modal-card" role="dialog" aria-modal="true">
+            <!-- Modal elements dynamically loaded by openProductDetailModal() in app.js -->
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+       SECURE CHECKOUT FORM DIALOG (MULTISTEP)
+       ========================================================================== -->
+    <div class="modal-backdrop" id="checkout-backdrop">
+        <div class="checkout-card" id="checkout-card" role="dialog" aria-modal="true" aria-labelledby="checkout-dialog-heading">
+            <button class="modal-close" id="checkout-close" aria-label="Cancel checkout">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+
+            <div class="checkout-header">
+                <h3 class="checkout-title" id="checkout-dialog-heading">Checkout Securely</h3>
+                <!-- Progress steps bar -->
+                <div class="checkout-steps">
+                    <div class="checkout-step active" title="Step 1: Shipping Details"></div>
+                    <div class="checkout-step" title="Step 2: Payment Gateway"></div>
+                    <div class="checkout-step" title="Step 3: Order Completed"></div>
+                </div>
+            </div>
+
+            <!-- STEP 1: SHIPPING ADDRESS FORM -->
+            <form class="form-section active" id="checkout-step-1" onsubmit="event.preventDefault();">
+                <h4 class="selector-title">1. Shipping Information</h4>
+                <div class="form-group">
+                    <label for="chk-name" class="form-label">Full Name</label>
+                    <input type="text" id="chk-name" class="form-input" placeholder="John Doe" required>
+                </div>
+                <div class="form-group">
+                    <label for="chk-email" class="form-label">Email Address</label>
+                    <input type="email" id="chk-email" class="form-input" placeholder="john@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="chk-address" class="form-label">Street Address</label>
+                    <input type="text" id="chk-address" class="form-input" placeholder="123 Luxury Avenue" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="chk-city" class="form-label">City</label>
+                        <input type="text" id="chk-city" class="form-input" placeholder="New York" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="chk-zip" class="form-label">ZIP / Postal Code</label>
+                        <input type="text" id="chk-zip" class="form-input" placeholder="10001" required>
+                    </div>
+                </div>
+            </form>
+
+            <!-- STEP 2: CREDIT CARD GATEWAY FORM -->
+            <form class="form-section" id="checkout-step-2" onsubmit="event.preventDefault();">
+                <h4 class="selector-title">2. Payment Method</h4>
+                <div class="form-group">
+                    <label for="chk-card" class="form-label">Credit Card Number</label>
+                    <input type="text" id="chk-card" class="form-input" placeholder="4111 2222 3333 4444" maxlength="19" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="chk-expiry" class="form-label">Expiry Date</label>
+                        <input type="text" id="chk-expiry" class="form-input" placeholder="MM/YY" maxlength="5" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="chk-cvv" class="form-label">Security CVV</label>
+                        <input type="password" id="chk-cvv" class="form-input" placeholder="***" maxlength="3" required>
+                    </div>
+                </div>
+                <div style="font-size: 0.8rem; color: var(--text-muted); display:flex; align-items:center; gap:0.5rem; margin-top:0.5rem;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="hsl(140, 75%, 45%)" style="width:16px; height:16px; stroke:currentColor; stroke-width:3;">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                        <path d="M7 11V7a5 5 0 0110 0v4" />
+                    </svg>
+                    Fully SSL encrypted end-to-end sandbox connection.
+                </div>
+            </form>
+
+            <!-- STEP 3: TRANSACTION SUCCESS CONFIRMATION -->
+            <div class="form-section checkout-success" id="checkout-step-3">
+                <div class="success-icon-wrapper">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                    </svg>
+                </div>
+                <h4 class="success-title">Order Placed Successfully!</h4>
+                <p class="success-desc">Thank you for your purchase with Veloce. A secure confirmation invoice has been sent to your email.</p>
+                <button class="success-btn" onclick="closeCheckoutSuccess()">Continue Shopping</button>
+            </div>
+
+            <!-- Modal Nav Footer buttons -->
+            <div class="checkout-footer" id="checkout-footer">
+                <button class="btn-checkout-prev" id="btn-checkout-prev" onclick="handleCheckoutPrev()">Back</button>
+                <button class="btn-checkout-next" id="btn-checkout-next" onclick="handleCheckoutNext()">Next Step</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+       FOOTER SECTION
+       ========================================================================== -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- About Info -->
+                <div class="footer-column footer-about">
+                    <a href="#" class="logo" aria-label="Veloce Footer Home">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" style="width: 20px; height: 20px; stroke: var(--primary);">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+                        </svg>
+                        Veloce<span>.</span>
+                    </a>
+                    <p>Creating futuristic technology accessories and curated lifestyle solutions built upon peak engineering and minimalistic elegance.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Twitter connection">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 18.406" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram connection">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn connection">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
+                                <circle cx="4" cy="4" r="2" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Navigation Links -->
+                <div class="footer-column">
+                    <h4>Categories</h4>
+                    <div class="footer-links">
+                        <a href="#shop-section" onclick="document.getElementById('chip-electronics').click()">Electronics</a>
+                        <a href="#shop-section" onclick="document.getElementById('chip-accessories').click()">Accessories</a>
+                        <a href="#shop-section" onclick="document.getElementById('chip-footwear').click()">Footwear</a>
+                        <a href="#shop-section" onclick="document.getElementById('chip-living').click()">Home & Living</a>
+                    </div>
+                </div>
+
+                <!-- Customer Care links -->
+                <div class="footer-column">
+                    <h4>Support</h4>
+                    <div class="footer-links">
+                        <a href="#">Track Order</a>
+                        <a href="#">Returns Policy</a>
+                        <a href="#">FAQ Center</a>
+                        <a href="#">Privacy Security</a>
+                    </div>
+                </div>
+
+                <!-- Newsletter registration Form -->
+                <div class="footer-column footer-newsletter">
+                    <h4>Stay Ahead</h4>
+                    <p>Subscribe to receive exclusive access to early product launches, member discounts, and design insights.</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault(); showToast('Newsletter subscription registered!', 'success'); this.querySelector('input').value='';">
+                        <input type="email" class="newsletter-input" placeholder="Your email..." required aria-label="Newsletter email input">
+                        <button type="submit" class="btn-newsletter" aria-label="Subscribe to newsletter">Join</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Footer Bottom panel -->
+            <div class="footer-bottom">
+                <p>&copy; 2026 Veloce Inc. All engineering designs reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Security Statement</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Core Javascript Code (Linked deferred for performance) -->
+    <script src="app.js" defer></script>
+</body>
+</html>
