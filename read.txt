@@ -1,0 +1,23 @@
+### Objective:
+
+Learn how to create and use functions in JavaScript.
+
+### Requirements:
+
+- Write all code in a JavaScript file (.js).
+- Comment each function to explain what it does.
+- Test functions with at least two different inputs.
+- Ensure code is neatly formatted and easy to read.
+
+### Task:
+
+1. **Basic Function:**
+    - Write a function named `add` that takes two numbers and returns their sum.
+2. **Function with a Return Value:**
+    - Make a function `isEven` that checks if a number is even and returns `true` or `false`.
+3. **Nested Function :**
+    - Have a function `countdown` that contains another function inside which decrements a counter and logs it.
+
+### Submission:
+
+Submit the `.js` file with your code. Include comments with test cases showing the expected output for each function.
